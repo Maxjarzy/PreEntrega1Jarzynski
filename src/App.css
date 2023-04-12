@@ -1,7 +1,24 @@
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+}
+
 .cartIcon {
   color:rgba(255, 255, 255, 0.55);
-  font-size: 40px;
-  margin-right: 10px;
+  font-size: 30px;
+  margin-right: 5px;
+
+}
+
+.cart-paragraph {
+  color:white;
+
+}
+
+.btn-close:focus {
+  box-shadow: none;
 }
 
 .navbar-toggler {
@@ -13,6 +30,13 @@
 .navbar-toggler:focus{
   border: none;
   box-shadow: none;
+
+}
+
+.navbar-buttonCart-container {
+  display: flex;
+  flex-direction: row;
+
 }
 
 .App {
