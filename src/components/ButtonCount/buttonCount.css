@@ -1,0 +1,35 @@
+.itemCountContainer{
+    display: flex;
+    column-gap: 2rem;
+
+}
+
+
+.itemCountDisplay{
+    display: flex;
+    margin: auto auto;
+    width: 60px;
+    justify-content: center;
+
+}
+
+.itemCount{
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+
+.stockPositivo{
+    padding: 3px 1rem;
+    border: 1px solid rgba(0, 128, 0, 0.589);
+    border-radius: 5px;
+}
+
+
+.sinStock{
+    padding: 3px 1rem;
+    border: 1px solid rgba(255, 0, 0, 0.589);
+    border-radius: 5px;
+    
+}
