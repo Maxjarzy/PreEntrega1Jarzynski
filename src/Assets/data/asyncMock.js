@@ -285,8 +285,9 @@ export const getProductos = () => {
 
 export const getProducto = (id) => {
   return new Promise((resolve) => {
+    const idNum = Number(id)
     setTimeout(() => {
-      resolve(productos.find((producto) => producto.id == id));
+      resolve(productos.find((producto) => producto.id === idNum));
     }, 2000);
   });
 };
@@ -294,7 +295,7 @@ export const getProducto = (id) => {
 export const getCategoria = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(productos.filter((producto) => producto.categoria == id));
+      resolve(productos.filter((producto) => producto.categoria === id));
     }, 2000);
   });
 };
