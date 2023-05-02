@@ -1,0 +1,76 @@
+.NavBar {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  background-image: url(../../Assets/img/NavBar.jpg);
+  background-size:cover;
+  background-position-y: -65%;
+}
+
+
+.NavBar--Logo {
+  height: 120px;
+  width: 120px;
+
+}
+
+
+.NavBar--List {
+  display: flex;
+  list-style: none;
+  width: 80%;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+.NavBar--List > li {
+  margin: 15px;
+
+}
+
+
+.NavBar--List > li > a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+
+.NavBar > .cart-container {
+  justify-self: flex-end;
+
+}
+
+
+.Cart--Container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  justify-content: flex-end;
+  margin:15px;
+
+}
+
+
+.Cart--Icon {
+  color: rgba(0, 0, 0);
+  font-size: 30px;
+  margin-right: 5px;
+
+}
+
+
+.Cart--Paragraph {
+  color: rgb(0, 0, 0);
+
+}

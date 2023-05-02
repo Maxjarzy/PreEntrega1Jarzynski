@@ -4,9 +4,9 @@ import { FaShoppingCart } from "react-icons/fa"
 
 export const CartWidget = () => {
   return (
-    <div className='cart-container'>
-      <FaShoppingCart className='cartIcon'/>
-      <p className='cart-paragraph'>{0}</p>
+    <div className='Cart--Container'>
+      <FaShoppingCart className='Cart--Icon'/>
+      <p className='Cart--Paragraph'>{0}</p>
     </div>
   )
 }
