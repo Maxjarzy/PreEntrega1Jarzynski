@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.CartItem--Container{
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 60px;
+    margin: 15px;
+
+}
+
+
+.CartItem--Container > div{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 100%;
+    align-items: center;
+    overflow: hidden;
+}
+

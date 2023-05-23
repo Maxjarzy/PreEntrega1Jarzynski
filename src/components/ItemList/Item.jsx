@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Item.css'
 
 
-export const Item = ({ articulo, precio, foto, descripcion, stock, id }) => {
+export const Item = ({ articulo, precio, foto, stock, id }) => {
 
 
   return (

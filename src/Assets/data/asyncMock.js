@@ -15,7 +15,7 @@ const productos = [
     descripcion: "Candelabro de cristal tallado con capacidad para tres velas",
     foto: "https://http2.mlstatic.com/D_NQ_NP_694922-MLA54638046263_032023-O.webp",
     categoria: "Decoración",
-    stock: 6,
+    stock: 0,
   },
   {
     id: 3,
@@ -127,7 +127,7 @@ const productos = [
     precio: 250,
     descripcion:
       "Cesto de mimbre trenzado con asas, ideal para guardar mantas o revistas",
-    foto: "https://murillohome.com/wp-content/uploads/2022/05/DG__4965.jpg",
+    foto: "https://arredo.vtexassets.com/arquivos/ids/470698-800-auto?v=638159042271170000&width=800&height=auto&aspect=true",
     categoria: "Decoración",
     stock: 8,
   },

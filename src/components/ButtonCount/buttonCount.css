@@ -23,6 +23,7 @@
 .stockPositivo{
     padding: 3px 1rem;
     border: 1px solid rgba(0, 128, 0, 0.589);
+    background-color: rgba(0, 128, 0, 0.568);
     border-radius: 5px;
 }
 
@@ -30,6 +31,7 @@
 .sinStock{
     padding: 3px 1rem;
     border: 1px solid rgba(255, 0, 0, 0.589);
+    background-color: rgba(255, 0, 0, 0.568);
     border-radius: 5px;
     
 }
