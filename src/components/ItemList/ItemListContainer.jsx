@@ -1,28 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { getProductos, getCategoria } from "../../Assets/data/asyncMock";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  where,
+  query,
+} from "firebase/firestore";
+import { Loader } from "../Loader/Loader";
 
-export const ItemListContainer = ({ mensaje }) => {
+export const ItemListContainer = () => {
+  const db = getFirestore();
   const [productos, setProductos] = useState([]);
 
   const { id } = useParams();
-  
 
   useEffect(() => {
-    const asyncFunc = id ? getCategoria : getProductos;
+    const itemsCollection = id
+      ? query(collection(db, "products"), where("categoria", "==", `${id}`))
+      : collection(db, "products");
 
-    asyncFunc(id)
-      .then((response) => {
-        setProductos(response);
-      })
-      .catch((error) => console.error(error));
-  }, [id]);
+    getDocs(itemsCollection).then((products) => {
+      setProductos(products.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+    });
+  }, [id, db]);
 
   return (
     <div className="Item--Container">
-      <h1>{id ? `${id}` : "Home"}</h1>
-      <ItemList products={productos} />
+      {productos.length === 0 ? <Loader /> : <ItemList products={productos} />}
     </div>
   );
 };

@@ -1,24 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import { getProducto } from '../../Assets/data/asyncMock'
-import { ItemDetail } from './ItemDetail'
-import { useParams } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import { ItemDetail } from "./ItemDetail";
+import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
+import { Loader } from "../Loader/Loader";
 
 export const ItemDetailContainer = () => {
+  const [producto, setproducto] = useState(null);
 
-    const [producto, setproducto] = useState({})
+  const params = useParams();
+  const { id } = params;
 
-    const params = useParams()
-    const {id} = params
+  useEffect(() => {
+    const db = getFirestore();
 
-    useEffect(() => {
-        getProducto(id)
-        .then((response) => {
-            setproducto(response)
-        })
-        .catch((error) => console.log(error))
-    },[id])
+    const itemRef = doc(db, "products", id);
+    getDoc(itemRef).then((item) => {
+      if (item.exists()) {
+        setproducto({ id: item.id, ...item.data() });
+      }
+    });
+  }, [id]);
 
-  return (
-    <ItemDetail productDetail={producto}/>
-  )
-}
+  return producto === null ? <Loader /> : <ItemDetail productDetail={producto} />;
+};

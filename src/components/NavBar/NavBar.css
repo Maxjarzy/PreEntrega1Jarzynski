@@ -1,7 +1,7 @@
 .NavBar {
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 21vh;
   align-items: center;
   background-image: url(../../Assets/img/NavBar.jpg);
   background-size:cover;

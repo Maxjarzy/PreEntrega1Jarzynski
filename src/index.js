@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import { initializeApp } from "firebase/app";
+import App from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const firebaseConfig = {
+  apiKey: "AIzaSyBf1GqdqxZxW47hDpF5aqOO50FX5vARcF4",
+  authDomain: "homedecor-849ea.firebaseapp.com",
+  projectId: "homedecor-849ea",
+  storageBucket: "homedecor-849ea.appspot.com",
+  messagingSenderId: "575614485859",
+  appId: "1:575614485859:web:9dccacdf0c92bb36bf7f56",
+};
+
+const app = initializeApp(firebaseConfig);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App/>
+    <App />
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
