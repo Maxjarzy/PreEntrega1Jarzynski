@@ -1,37 +1,78 @@
-.itemCountContainer{
-    display: flex;
-    column-gap: 2rem;
-
+.itemCountContainer {
+  display: flex;
+  column-gap: 2rem;
 }
 
-
-.itemCountDisplay{
-    display: flex;
-    margin: auto auto;
-    width: 60px;
-    justify-content: center;
-
+.itemCountDisplay {
+  display: flex;
+  margin: auto auto;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
+  padding: 16px 39px;
+  border-radius: 12px;
 }
 
-.itemCount{
-    display: flex;
-    column-gap: 1rem;
-    align-items: center;
+.itemCount {
+  display: flex;
+  column-gap: 1rem;
+  align-items: center;
 }
 
-
-.stockPositivo{
-    padding: 3px 1rem;
-    border: 1px solid rgba(0, 128, 0, 0.589);
-    background-color: rgba(0, 128, 0, 0.568);
-    border-radius: 5px;
+.stockPositivo {
+  border: 1px solid rgba(0, 128, 0, 0.589);
+  background-color: rgba(0, 128, 0, 0.568);
 }
 
+.sinStock {
+  border: 1px solid rgba(255, 0, 0, 0.589);
+  background-color: rgba(255, 0, 0, 0.568);
+}
 
-.sinStock{
-    padding: 3px 1rem;
-    border: 1px solid rgba(255, 0, 0, 0.589);
-    background-color: rgba(255, 0, 0, 0.568);
-    border-radius: 5px;
-    
+.btn {
+  background-color: #bec7c4;
+  color: #020101;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  padding: 16px 39px;
+  border: 0px solid #000;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0px 5px 10px 1px
+    rgba(177.28218111031242, 178.50001215934753, 178.09406847633585, 0.5);
+}
+
+.btn:hover {
+  background-color: #dfe2e1;
+}
+
+.itemCountBtn:active {
+  transform: scale(0.95);
+}
+
+.itemCountBtn {
+  background-color: #bec7c4;
+  color: #020101;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  padding: 16px 39px;
+  border: 0px solid #000;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0px 5px 10px 1px
+    rgba(177.28218111031242, 178.50001215934753, 178.09406847633585, 0.5);
+}
+.itemCountBtn:hover {
+  background-color: #dfe2e1;
+}
+.itemCountBtn:active {
+  transform: scale(0.95);
 }

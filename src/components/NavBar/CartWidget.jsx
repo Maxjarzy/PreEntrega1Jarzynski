@@ -10,7 +10,7 @@ export const CartWidget = () => {
   
   return (
 
-    <Link to='/cart' className='Cart--Icon'><FaShoppingCart/>{totalItems()}</Link>
+    <Link to='/cart' className='navBarCart'><FaShoppingCart/>{totalItems()}</Link>
 
     
   )

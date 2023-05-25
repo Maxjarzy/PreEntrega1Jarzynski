@@ -1,9 +1,10 @@
-.Loader--Container{
+.LoaderContainer{
   width: 100%;
   height: 71vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background:transparent;
 }
 
 

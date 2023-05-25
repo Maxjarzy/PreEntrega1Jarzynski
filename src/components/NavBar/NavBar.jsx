@@ -8,9 +8,9 @@ import { CartContext } from '../Cart/CartContexProvider';
 export const NavBar = () => {
     const {cartList} = useContext(CartContext)
   return (
-    <nav className='NavBar'>
-        <NavLink to={"/"}><img src={Logo} alt="Logo" className='NavBar--Logo'/></NavLink>
-        <ul className='NavBar--List'>
+    <nav className='navBar'>
+        <NavLink to={"/"}><img src={Logo} alt="Logo" className='navBarLogo'/></NavLink>
+        <ul className='navBarList'>
             <li>
                 <NavLink to={"/categoria/Hogar"}>Hogar</NavLink>
             </li>

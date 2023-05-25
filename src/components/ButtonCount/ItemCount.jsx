@@ -20,7 +20,7 @@ export const ItemCount = ({ initial, stock, onAdd}) => {
   return (
     <div className="itemCountContainer">
       <div className="itemCount">
-        <button onClick={detract}>-</button>
+        <button onClick={detract} className="itemCountBtn">-</button>
         <p
           className={`itemCountDisplay ${
             stock !== 0 ? "stockPositivo" : "sinStock"
@@ -28,9 +28,9 @@ export const ItemCount = ({ initial, stock, onAdd}) => {
         >
           {count}
         </p>
-        <button onClick={add}>+</button>
+        <button onClick={add} className="itemCountBtn">+</button>
       </div>
-      <button onClick={() =>{ onAdd(count); setCount(initial)}} disabled={stock === 0}>
+      <button onClick={() =>{ onAdd(count); setCount(initial)}} disabled={stock === 0} className="btn">
         Agregar al carrito
       </button>
     </div>

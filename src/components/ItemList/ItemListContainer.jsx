@@ -27,7 +27,7 @@ export const ItemListContainer = () => {
   }, [id, db]);
 
   return (
-    <div className="Item--Container">
+    <div className="itemListContainer">
       {productos.length === 0 ? <Loader /> : <ItemList products={productos} />}
     </div>
   );

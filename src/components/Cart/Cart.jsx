@@ -10,22 +10,22 @@ export const Cart = () => {
 
   if(totalItems() === 0){
     return (
-      <div>
+      <div className='cartContainer cartContainerEmpty'>
         <h1>El carrito está vacío</h1>
-        <Link to='/'>Ir la inicio</Link>
+        <Link to='/' className='btn'>Ir al inicio</Link>
       </div>
     )
   }
 
   return(
-    <div>
-        <h1>Su compra</h1>
+    <div className='cartContainer'>
+        <h1 className='cartTitle'>Su compra</h1>
         {
           cartList.map(item => <CartItem key={item.id} {...item}/>)
         }
         <p>Total de su compra: ${cartList.length === 0 ? "0" : compraTotal()}</p>
-        <button onClick={removeList}>Vacíar carrito</button>
-        <button>CheckOut</button>
+        <button onClick={removeList} className='btn'>Vacíar carrito</button>
+        <button className='btn'>CheckOut</button>
       </div>
   )
 

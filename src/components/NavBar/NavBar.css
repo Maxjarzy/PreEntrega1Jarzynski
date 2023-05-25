@@ -1,22 +1,19 @@
-.NavBar {
+.navBar {
   display: flex;
   width: 100%;
   height: 21vh;
   align-items: center;
-  background-image: url(../../Assets/img/NavBar.jpg);
+  background-image: url(../../Assets/img/NavBar.webp);
   background-size:cover;
-  background-position-y: -65%;
+  background-position-y: 60%;
 }
 
-
-.NavBar--Logo {
-  height: 120px;
-  width: 120px;
-
+.navBarLogo {
+  width: 20vh;
+  height: 20vh;
 }
 
-
-.NavBar--List {
+.navBarList {
   display: flex;
   list-style: none;
   width: 80%;
@@ -24,31 +21,31 @@
   align-items: center;
   padding: 0;
   margin: 0;
-
 }
 
-
-.NavBar--List > li {
+.navBarList > li {
   margin: 15px;
-
 }
 
-
-.NavBar--List > li > a {
+.navBarList > li > a {
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: 20px;
-  font-family: 'Quicksand', sans-serif;
-
+  font-size: 30px;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 10px;
+  margin: 5px;
 }
 
+.navBarList > li > a:hover{
+  font-style: italic;
+}
 
-.Cart--Icon {
+.navBarCart {
   color: rgba(0, 0, 0);
-  font-size: 20px;
+  font-size: 30px;
   margin-right: 5px;
-
+  text-decoration: none;
 }
 
 
