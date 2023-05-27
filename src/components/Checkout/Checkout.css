@@ -36,6 +36,7 @@
   min-height: 71vh;
   background:url(../../Assets/img/Background.jpg);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

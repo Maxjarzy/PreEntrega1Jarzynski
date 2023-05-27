@@ -13,6 +13,7 @@ import {
   where,
   documentId,
 } from "firebase/firestore";
+import { Link } from "react-router-dom";
 
 export const Checkout = () => {
   const { cartList, compraTotal, removeList } = useContext(CartContext);
@@ -77,6 +78,9 @@ export const Checkout = () => {
     return (
       <div className="orderContainer">
         <h1>El id de su compra es: {orderId}</h1>;
+        <Link to="/" className="btn">
+          Volver al inicio
+        </Link>
       </div>
     );
   }

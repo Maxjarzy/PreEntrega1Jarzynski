@@ -14,7 +14,7 @@ export const CartItem = ({ precio, qty, foto, id, articulo }) => {
       <p>${precio}</p>
       <p>{qty} u</p>
       <p>${totalImport(precio, qty)}</p>
-      <button onClick={()=> deleteItem(id)} className="btn">
+      <button onClick={() => deleteItem(id)} className="btn">
         <RiDeleteBin6Line />
       </button>
     </div>

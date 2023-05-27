@@ -7,7 +7,7 @@ export const CartContextProvider = ({ children }) => {
 
   const addToCart = (product, qty) => {
     if (cartList.some((item) => item.id === product.id)) {
-      console.log("El producto ya está en el carrito");
+      alert("El producto ya está en el carrito");
     } else {
       setCartList((prevCart) => [...prevCart, { ...product, qty }]);
     }
@@ -25,18 +25,16 @@ export const CartContextProvider = ({ children }) => {
   const totalImport = (precio, qty) => precio * qty;
 
   const compraTotal = () => {
-    let total= 0;
-    cartList.map((item) => total += item.precio*item.qty);
+    let total = 0;
+    cartList.map((item) => (total += item.precio * item.qty));
     return total;
   };
 
   const totalItems = () => {
     let total = 0;
-    cartList.map(item => total +=item.qty)
+    cartList.map((item) => (total += item.qty));
     return total;
-  }
-
-
+  };
 
   return (
     <CartContext.Provider
@@ -47,7 +45,7 @@ export const CartContextProvider = ({ children }) => {
         deleteItem,
         totalImport,
         compraTotal,
-        totalItems
+        totalItems,
       }}
     >
       {children}

@@ -28,7 +28,7 @@ export const Cart = () => {
       <button onClick={removeList} className="btn">
         Vacíar carrito
       </button>
-      <Link to="/checkout" className="btn" style={{"width": "fit-content"}}>
+      <Link to="/checkout" className="btn" style={{ width: "fit-content" }}>
         CheckOut
       </Link>
     </div>

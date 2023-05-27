@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./buttonCount.css";
 
-export const ItemCount = ({ initial, stock, onAdd}) => {
+export const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setCount] = useState(initial);
 
   const add = () => {
@@ -16,11 +16,12 @@ export const ItemCount = ({ initial, stock, onAdd}) => {
     }
   };
 
-
   return (
     <div className="itemCountContainer">
       <div className="itemCount">
-        <button onClick={detract} className="itemCountBtn">-</button>
+        <button onClick={detract} className="itemCountBtn">
+          -
+        </button>
         <p
           className={`itemCountDisplay ${
             stock !== 0 ? "stockPositivo" : "sinStock"
@@ -28,9 +29,18 @@ export const ItemCount = ({ initial, stock, onAdd}) => {
         >
           {count}
         </p>
-        <button onClick={add} className="itemCountBtn">+</button>
+        <button onClick={add} className="itemCountBtn">
+          +
+        </button>
       </div>
-      <button onClick={() =>{ onAdd(count); setCount(initial)}} disabled={stock === 0} className="btn">
+      <button
+        onClick={() => {
+          onAdd(count);
+          setCount(initial);
+        }}
+        disabled={stock === 0}
+        className="btn"
+      >
         Agregar al carrito
       </button>
     </div>
