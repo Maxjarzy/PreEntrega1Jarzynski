@@ -1,7 +1,7 @@
 .itemDetailContainer {
   background-image: url(../../Assets/img/Background.jpg);
-  padding:15px;
   min-height: 79vh; 
+  padding: 15px;
 }
 
 .itemDetailContainer.itemDetailError {

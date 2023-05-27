@@ -3,12 +3,22 @@ footer {
     height: 200px;
     background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
 }
 
-footer > a {
+footer > p {
+    margin: 2rem 0;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+    font-style: italic;
+}
+
+footer > div > a {
     font-size: 30px;
     margin: 0 2rem;
     color: #bec7c4;
